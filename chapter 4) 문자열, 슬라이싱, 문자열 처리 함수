@@ -27,11 +27,11 @@ print("뒤 7자리 (뒤에부터) : " + jumin[-10:-7]) # 20-
 
 # 4-3. 문자열 처리 함수
 python = "Python is Amazing"
-print(python.lower())
-print(python.upper())
+print(python.lower()) # 모두 소문자로
+print(python.upper()) # 모두 대문자로
 print(python[0].isupper())
 print(python[0].islower())
-print(len(python))
+print(len(python)) # 문자열의 길이
 print(python.replace("Python","Java"))
 
 index = python.index("n")
@@ -45,3 +45,32 @@ print(python.find("Java")) # find는 원하는 값이 없을 때 -1 반환
 print("hi")
 
 print(python.count("n"))
+
+
+# 4-4. 문자열 포맷
+# print("a" + "b")
+# print("a", "b")
+
+# 방법 1 : % 이용하기
+print("나는 %d살 입니다." % 20) # d는 정수 값을 의미
+print("나는 %s을 좋아해요." % "파이썬") # s = string
+print("Apple 은 %c로 시작해요." % "A") # c = character
+
+# %s
+print("나는 %s살 입니다." % 20)
+print("나는 %s색과 %s색을 좋아해요" %("파란", "빨간"))
+
+# 방법 2 : {} 와 .format() 이용하기
+print("나는 {}살입니다." .format(20))
+print("나는 {}색과 {}색을 좋아해요" .format("파란", "빨간"))
+print("나는 {0}색과 {1}색을 좋아해요" .format("파란", "빨간"))
+print("나는 {1}색과 {0}색을 좋아해요" .format("파란", "빨간"))
+
+# 방법 3 
+print("나는 {age}살이며, {color}색을 좋아해요" .format(age = 20, color = "빨간"))
+print("나는 {age}살이며, {color}색을 좋아해요" .format(color = "빨간", age = 20))
+
+# 방법 4
+age = 20
+color = "빨간"
+print(f"나는 {age}살이며, {color}색을 좋아해요")
