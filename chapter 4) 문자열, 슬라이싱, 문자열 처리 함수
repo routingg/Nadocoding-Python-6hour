@@ -23,3 +23,25 @@ print("뒤 7자리 : " + jumin[7:14])
 print("뒤 7자리 : " + jumin[7:]) # 7 부터 끝까지
 print("뒤 7자리 (뒤에부터) : " + jumin[-7:]) # 맨 뒤에서 7번째부터 끝까지
 print("뒤 7자리 (뒤에부터) : " + jumin[-10:-7]) # 20-
+
+
+# 4-3. 문자열 처리 함수
+python = "Python is Amazing"
+print(python.lower())
+print(python.upper())
+print(python[0].isupper())
+print(python[0].islower())
+print(len(python))
+print(python.replace("Python","Java"))
+
+index = python.index("n")
+print(index)
+index = python.index("n", index + 1)
+print(index)
+
+print(python.find("n"))
+print(python.find("Java")) # find는 원하는 값이 없을 때 -1 반환
+#print(python.index("Java")) # index는 원하는 값이 없을 때 error 냄
+print("hi")
+
+print(python.count("n"))
